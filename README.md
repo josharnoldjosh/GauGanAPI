@@ -2,7 +2,7 @@
 
 ## Description
 
-A light-weight API for bulk processing images to `http://nvidia-research-mingyuliu.com/gaugan/`.
+A light-weight API for bulk processing images to [Nvidia GauGan](http://nvidia-research-mingyuliu.com/gaugan/).
 
 ## Installation
 
@@ -15,6 +15,8 @@ You first need to install the requirements. Run:
 Or, optionally, create your own virtual environment by:
 
 ```python
+git clone https://github.com/josharnoldjosh/GauGanAPI.git
+cd GauGanAPI
 pip3 install virtualenv
 virtualenv env
 source env/bin/activate
@@ -29,7 +31,7 @@ pip install -r requirements.txt
 
 ![alt text](https://i.ibb.co/qWv2S3c/Screen-Shot-2020-03-31-at-10-58-12-AM.png)
 
-3. The last step is you need the `chromedriver` for your version of Google Chrome. Jump to `https://sites.google.com/a/chromium.org/chromedriver/downloads` and download whatever version of chrome driver that corresponds to your version of Google Chrome. For me, I would download version 80. Lastly, unzip the downloaded folder and put "chromedriver" in the root of this Github folder.
+3. The last step is you need the `chromedriver` for your version of Google Chrome. Jump to [chromedriver downloads](https://sites.google.com/a/chromium.org/chromedriver/downloads) and download whatever version of chrome driver that corresponds to your version of Google Chrome. For me, I would download version 80. Lastly, unzip the downloaded folder and put "chromedriver" in the root of this Github folder.
 
 ![alt text](https://i.ibb.co/9yP4nyT/Screen-Shot-2020-03-31-at-11-02-37-AM.png)
 
@@ -52,3 +54,7 @@ The function below actually handles uploading all the files. `file_types` is an 
 ```python
 upload.all(file_types=[FileType.png, FileType.jpg], sleep_interval=1)
 ```
+
+### Example
+
+Check out `example.py` for an example implementation!

@@ -23,9 +23,12 @@ class Upload:
         self.chrome_options.add_argument(f"--window-size={width},{height}")
         if headless:
             self.chrome_options.add_argument("--headless")
-        self.driver = webdriver.Chrome('chromedriver', options=self.chrome_options)                        
+        self.driver = webdriver.Chrome(executable_path='chromedriver', options=self.chrome_options)                        
         self.driver.get("http://34.216.122.111/gaugan/")
         self.driver.find_element_by_id("myCheck").click()
+
+        if not os.path.exists("input/"): os.mkdir('input/')
+        if not os.path.exists("output/"): os.mkdir('output/')
 
     def all(self, file_types=[FileType.png, FileType.jpg], sleep_interval=1):
         input_file_paths = self.get_input_file_paths(file_types)
@@ -65,8 +68,3 @@ class Upload:
 
     def close(self):
         self.driver.close()
-
-if __name__ == "__main__":
-    upload = Upload(use_display=False, headless=True, width=1920, height=1080)
-    upload.all(file_types=[FileType.png, FileType.jpg], sleep_interval=1)
-    print("[DONE]")
