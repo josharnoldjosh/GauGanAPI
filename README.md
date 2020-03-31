@@ -27,11 +27,11 @@ pip install -r requirements.txt
 
 2. You have to check your Google Chrome version by doing `Chrome > About Google Chrome`. You can see in the image below I am running Google Chrome version 80. If you're on a terminal, you'll have to google another way to figure out your chrome version.
 
-![alt text](https://ibb.co/1dk4gtP)
+![alt text](https://i.ibb.co/qWv2S3c/Screen-Shot-2020-03-31-at-10-58-12-AM.png)
 
 3. The last step is you need the `chromedriver` for your version of Google Chrome. Jump to `https://sites.google.com/a/chromium.org/chromedriver/downloads` and download whatever version of chrome driver that corresponds to your version of Google Chrome. For me, I would download version 80. Lastly, unzip the downloaded folder and put "chromedriver" in the root of this Github folder.
 
-![alt text](https://ibb.co/zPd2sPR)
+![alt text](https://i.ibb.co/9yP4nyT/Screen-Shot-2020-03-31-at-11-02-37-AM.png)
 
 ## Running the code
 
