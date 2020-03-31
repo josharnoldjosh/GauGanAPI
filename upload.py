@@ -23,7 +23,7 @@ class Upload:
         self.chrome_options.add_argument(f"--window-size={width},{height}")
         if headless:
             self.chrome_options.add_argument("--headless")
-        self.driver = webdriver.Chrome(executable_path='chromedriver', options=self.chrome_options)                        
+        self.driver = webdriver.Chrome(executable_path='./chromedriver', options=self.chrome_options)                        
         self.driver.get("http://34.216.122.111/gaugan/")
         self.driver.find_element_by_id("myCheck").click()
 
